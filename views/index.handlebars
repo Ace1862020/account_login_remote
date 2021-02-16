@@ -4,28 +4,28 @@
     <h1>Account Login</h1>
   </div>
 
-  <form action="/member" method="POST" name="name">
+  <form action="/member" method="POST">
     <div class="row">
       <div class="d-flex justify-content-center">
-        <div class="col-md-4 col-sm-6">
-          <div class="input-group mb-3">
-            <!--<span class="input-group-text" id="username-input">@</span>-->
-            <input type="text" class="form-control mb-3" placeholder="Username" aria-label="Username"
-              aria-describedby="username-input">
+        <div class="col-md-5 col-sm-6">
+          <div class="form-control mb-3">
+            <!-- E-mail input -->
+            <label for="email-adderss" class="form-label">Email</label>
+            <input type="email" class="form-control mb-3" name="email" id="email-adderss"
+              placeholder="Please enter your e-mail" aria-label="Username" aria-describedby="username-input">
+            <!-- Password input -->
+            <label for="password-only" class="form-label">Password</label>
+            <input type="password" class="form-control mb-3" name="password" id="password-only"
+              placeholder="Your password" aria-label="Password">
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="d-flex justify-content-center">
-        <div class="col-md-4 col-sm-6">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control mb-3" placeholder="Password" aria-label="Password">
-          </div>
-        </div>
-      </div>
+    <!--
+    <div class="d-flex justify-content-center my-2">
+      <span style="color: brown;">您輸入的 Username 或 Password 錯誤</span>
     </div>
+    -->
     <div class="d-flex justify-content-center mt-2">
       <button type="submit" class="btn btn-dark">Sign in</button>
     </div>

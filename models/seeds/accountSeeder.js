@@ -14,7 +14,7 @@ db.on('error', () => {
 db.once('open', () => {
   console.log('mongodb connected!!')
 
-  accountList.users.forEach((data) => {
+  accountList.forEach((data) => {
     Account.create({
       firstName: data.firstName,
       email: data.email,
