@@ -12,7 +12,8 @@
             <!-- E-mail input -->
             <label for="email-adderss" class="form-label">Email</label>
             <input type="email" class="form-control mb-3" name="email" id="email-adderss"
-              placeholder="Please enter your e-mail" aria-label="Username" aria-describedby="username-input">
+              placeholder="Please enter your e-mail" aria-label="Username" aria-describedby="username-input" {{#if
+              memberData.email}} value="{{memberData.email}}" {{/if}}>
             <!-- Password input -->
             <label for="password-only" class="form-label">Password</label>
             <input type="password" class="form-control mb-3" name="password" id="password-only"
@@ -21,11 +22,11 @@
         </div>
       </div>
     </div>
-    <!--
+    {{#if message}}
     <div class="d-flex justify-content-center my-2">
       <span style="color: brown;">您輸入的 Username 或 Password 錯誤</span>
     </div>
-    -->
+    {{/if}}
     <div class="d-flex justify-content-center mt-2">
       <button type="submit" class="btn btn-dark">Sign in</button>
     </div>
